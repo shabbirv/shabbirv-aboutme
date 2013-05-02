@@ -25,10 +25,6 @@
     return self;
 }
 
-- (void)awakeFromNib {
-    self.editable = NO;
-}
-
 - (void)populateFactWithAppId:(NSString *)appId {
     [NSObject cancelPreviousPerformRequestsWithTarget:self];
     

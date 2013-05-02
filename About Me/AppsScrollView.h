@@ -24,6 +24,7 @@
 @property (nonatomic, weak) id appScrollDelegate;
 @property (nonatomic, assign) NSArray *appIds;
 @property (nonatomic, assign) BOOL buttonsShown;
+
 - (void)scrollToPage:(int) page;
 - (void)meAction;
 

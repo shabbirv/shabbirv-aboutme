@@ -45,6 +45,7 @@
         nameLabel.shadowOffset = CGSizeMake(0, 1);
         [self addSubview:nameLabel];
         
+        //Add text view that generates a random fact about an app
         rTextView = [[RandomFactTextView alloc] initWithFrame:CGRectMake(0, self.frame.size.height - 100, 320, 150)];
         rTextView.text = @"22 year old that has spent over 4 amazing years developing for iOS";
         [self addSubview:rTextView];
@@ -94,9 +95,11 @@
 #pragma mark UIScrollViewDelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
     //Calculate page number
     CGFloat pageWidth = scrollView.frame.size.width;
     int page = floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+    
     //if the page hasn't changed return
     if (page == currentPage) return;
     
